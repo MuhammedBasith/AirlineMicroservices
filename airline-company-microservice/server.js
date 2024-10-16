@@ -50,7 +50,7 @@ app.get('/airlines/:id', async (req, res) => {
 app.get('/airlines/:id/flights', async (req, res) => {
     try {
         const airlineId = req.params.id;
-        const flights = await axios.get(`http://flight-service-url/flightsUnderAnAirline?airlineId=${airlineId}`);
+        const flights = await axios.get(`http://flight-microservice:3002/flightsUnderAnAirline?airlineId=${airlineId}`);
         res.status(200).json(flights.data);
     } catch (error) {
         res.status(500).json({ message: error.message });
