@@ -19,7 +19,7 @@ services:
     ports:
       - "3001:3001"
     depends_on:
-      - mongo
+      - mongodb
 
   flight-microservice:
     build:
@@ -28,7 +28,7 @@ services:
     ports:
       - "3002:3002"
     depends_on:
-      - mongo
+      - mongodb
 
   passenger-microservice:
     build:
@@ -37,9 +37,9 @@ services:
     ports:
       - "3003:3003"
     depends_on:
-      - mongo
+      - mongodb
 
-  mongo:
+  mongodb:
     image: mongo:latest
     ports:
       - "27017:27017"

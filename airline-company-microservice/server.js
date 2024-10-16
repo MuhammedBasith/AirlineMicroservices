@@ -5,7 +5,7 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb://mongodb:27017/airlindb', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://mongodb:27017/airlinedb', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const Airlines = mongoose.model('Airlines', {
     airlineName: { type: String, required: true },
