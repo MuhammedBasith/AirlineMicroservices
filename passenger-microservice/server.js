@@ -64,7 +64,7 @@ app.get('/passengersByFlightId', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3002; // Use a different port than the flight service
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
     console.log(`Passenger service running on port ${PORT}`);
 });
